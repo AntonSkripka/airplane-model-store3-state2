@@ -82,6 +82,8 @@ export default function PlaneItem({
     startM,
     endM
 }) {
+    console.log(realUrl,
+    realFullUrl)
     return (
         <>
             {/* //! Приклад react-icons */}

@@ -77,8 +77,8 @@ export default function PlanesList({ items }) {
                     <PlaneItem
                         url={item.url.main}
                         promotialUrl = {item.url.promotional}
-                        realUrl={item.url.actual}
-                        realFullUrl={item.url.actualFull}
+                        realUrl={item.model.actualImages}
+                        realFullUrl={item.model.actualFullImages}
 
                         title={item.name.brief}
                         fullTitle={item.name.full}

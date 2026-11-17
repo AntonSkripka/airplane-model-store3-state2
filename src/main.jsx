@@ -27,7 +27,7 @@ import './index.css'; //! підключення Normalize і Reset CSS
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/airplane-model-store3-state1">
+    <BrowserRouter basename="/airplane-model-store3-state2">
       <ThemeProvider theme={theme}>
         {/* <App /> */}
         {/* <AppCounter /> */}

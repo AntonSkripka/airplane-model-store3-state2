@@ -4,8 +4,8 @@ import Section from '@/components/Section/Section.jsx';
 import PlanesList from "@/components/PlanesList/PlanesList"
 import { Filter } from '../Filter/Filter';
 
-import planes from '@/json/planes.json';
-import helicopters from '@/json/helicopters.json';
+// import planes from '@/json/planes.json';
+// import helicopters from '@/json/helicopters.json';
 import aircrafts from "@/json/aircrafts.json";
 
 // import css from "./AppFiltration.module.css";

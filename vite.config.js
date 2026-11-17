@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
 
   //! Ім'я репозиторію для GitHub Pages
-  base: '/airplane-model-store3-state1/',
+  base: '/airplane-model-store3-state2/',
 
   //! Налаштування аліасів для абсолютних шляхів імпортів
   resolve: {

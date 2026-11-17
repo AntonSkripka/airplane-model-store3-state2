@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import Section from '@/components/Section/Section.jsx';
 import PlanesList from "@/components/PlanesList/PlanesList"
-import planes from '@/json/planes.json';
-import helicopters from '@/json/helicopters.json';
+// import planes from '@/json/planes.json';
+// import helicopters from '@/json/helicopters.json';
 import css from "./AppFiltration.module.css";
 import { Filter } from '../Filter/Filter';
 
