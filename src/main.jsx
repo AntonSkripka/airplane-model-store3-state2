@@ -13,8 +13,8 @@ import {
   AppFiltration2,
   AppFiltration3,
   AppFiltration4,
+  AppColorBox
 } from '@/components/App';
-
 
 //todo: var.1  Підключення Normalize (npm i normalize.css)
 // import 'normalize.css';  //! var.1 підключення тільки Normalize
@@ -34,7 +34,8 @@ createRoot(document.getElementById('root')).render(
         {/* <AppFiltration1 /> */}
         {/* <AppFiltration2 /> */}
         {/* <AppFiltration3 /> */}
-        <AppFiltration4 />
+        {/* <AppFiltration4 /> */}
+        <AppColorBox />
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode >
