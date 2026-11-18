@@ -45,3 +45,27 @@
     border-radius: 5px;
     border: 2px solid black;
 }
+
+/*! Блок обраних кольорів */
+.selectedColorsContainer {
+    width: 860px;
+    margin: 100px auto;
+    padding: 10px;
+    /* outline: 1px solid black; */
+}
+
+.selectedColorsBox{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.selectedColor {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #191919;
+}
