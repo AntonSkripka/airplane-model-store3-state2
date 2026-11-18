@@ -82,7 +82,7 @@ export class ColorBox extends Component {
                                     style={{ backgroundColor: color }}
                                     onClick={() => this.setActiveIdx(index)}
                                 >
-                                    ✅On
+                                    {selectedButtonsIdx.includes(index) ? "✅On" : "🆓Off"}
                                 </button>
                             )
                         })}
