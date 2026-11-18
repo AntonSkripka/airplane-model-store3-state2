@@ -1,5 +1,6 @@
 // import { ColorBox } from "../ColorBox/ColorBox-1";
-import { ColorBox } from "../ColorBox/ColorBox-2";
+// import { ColorBox } from "../ColorBox/ColorBox-2";
+import { ColorBox } from "../ColorBox/ColorBox-3-with-local-storage";
 
 const colorBoxOptions = [
   { label: 'red', color: '#ff0000' },
