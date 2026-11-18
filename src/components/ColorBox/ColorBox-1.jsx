@@ -80,7 +80,10 @@ export class ColorBox extends Component {
                                     className={css.colorBoxButton}
                                     key={index}
                                     style={{ backgroundColor: color }}
-                                    onClick={() => this.setActiveIdx(index)}
+                                    onClick={() => this.setActiveIdx(index)} //* ✅
+                                    // onClick={this.setActiveIdx(index)} //! ❌
+                                    // onClick={this.setActiveIdx} //! ❌
+
                                 >
                                     {selectedButtonsIdx.includes(index) ? "✅On" : "🆓Off"}
                                 </button>
@@ -98,9 +101,9 @@ export class ColorBox extends Component {
                         </span>
                     </p>
                     <div className={css.selectedColorsBox}>
-                        {selectedColors.map(({color, label}, index) => (
+                        {selectedColors.map(({color, label}) => (
                             <div
-                                key={index}
+                                key={color}
                                 className={css.selectedColor}
                                 style={{backgroundColor: color}}
                             >
