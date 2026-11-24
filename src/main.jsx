@@ -29,13 +29,13 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename="/airplane-model-store3-state2">
       <ThemeProvider theme={theme}>
-        {/* <App /> */}
+        <App />
         {/* <AppCounter /> */}
         {/* <AppFiltration1 /> */}
         {/* <AppFiltration2 /> */}
         {/* <AppFiltration3 /> */}
         {/* <AppFiltration4 /> */}
-        <AppColorBox />
+        {/* <AppColorBox /> */}
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode >

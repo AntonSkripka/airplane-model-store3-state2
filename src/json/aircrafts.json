@@ -32,7 +32,7 @@
         "darkGrey": 0,
         "white": 0
       },
-      "actualImages": [
+      "_actualImages": [
         "/airplane-model-store3-state2/images/planes-actual/f4u-comp-1.jpg",
         "/airplane-model-store3-state2/images/planes-actual/f4u-comp-2.jpg",
         "/airplane-model-store3-state2/images/planes-actual/f4u-comp-3.jpg",
@@ -692,7 +692,7 @@
         "grey": 680,
         "green": 690
       },
-      "actualImages": [
+      "_actualImages": [
         "/airplane-model-store3-state2/images/planes-actual/p-51-comp-1.jpg",
         "/airplane-model-store3-state2/images/planes-actual/p-51-comp-2.jpg",
         "/airplane-model-store3-state2/images/planes-actual/p-51-comp-3.jpg",
@@ -773,7 +773,7 @@
         "green": 0,
         "black": "_790"
       },
-      "actualImages": [
+      "_actualImages": [
         "/airplane-model-store3-state2/images/planes-actual/f-82-comp-1.jpg",
         "/airplane-model-store3-state2/images/planes-actual/f-82-comp-2.jpg",
         "/airplane-model-store3-state2/images/planes-actual/f-82-comp-3.jpg",

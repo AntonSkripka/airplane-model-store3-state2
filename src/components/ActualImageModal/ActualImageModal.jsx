@@ -41,6 +41,11 @@ export class ActualImageModal extends Component {
     render() {
         const { images, fullImages, briefName, error, description } = this.props;
         const { open, index } = this.state;
+        if (images.length === 1) {
+            return (
+                <img src={images[0]} alt="out of stock"></img>
+            )
+        }
         //! Масив об'єктів зображень для Lightbox
         // const slides = images.map((src) => ({ src }));
         //? Для плагіна Captions і Share

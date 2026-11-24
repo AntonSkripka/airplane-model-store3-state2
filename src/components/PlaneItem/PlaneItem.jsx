@@ -18,6 +18,7 @@ import { FcTrademark } from "react-icons/fc";
 //? <CiAirportSign1 /> - Реальна модель
 import { ActualImageModal } from '@/components/ActualImageModal/ActualImageModal';
 import defaultImage from "./default.png" //! Дефолтне зображення
+import templateOutOfStock from "./template-out-of-stock.jpg";
 import { iconSize } from '@/constants/iconSize.js';
 //! Реекспорт - декілька імпортів з однієї папки
 // import { getManufacturingYears } from '@/utils/formatDateDuration';
@@ -62,10 +63,16 @@ function onErrorImg(e) {
     e.target.src = defaultImage;
 }
 
+// function checkAvailability(realUrl) {
+//     if (!realUrl) {
+//         return 
+//     }
+// }
+
 export default function PlaneItem({
     url = defaultImage,
     promotialUrl = defaultImage,
-    realUrl,
+    realUrl = [templateOutOfStock],
     realFullUrl,
 
     title,
@@ -149,8 +156,10 @@ export default function PlaneItem({
                 description={description}
             />
             <ItemButtonStyled
-                className={css.itemButton}
-                type="button">Додати до кошику
+                className={realUrl.length !== 1 ? `${css.itemButton}` : `${css.itemButton} ${css.buttonDisabled}`}
+                type="button"
+            >
+                    Додати до кошику
             </ItemButtonStyled>
         </>
     )
