@@ -4,9 +4,29 @@ import css from "./ColorBox.module.css";
 export class ColorBox extends Component {
     state = {
         activeButtonIdx: null, //! індекс обраного елемента
-        selectedButtonsIdx: [], //! масив індексів обраних елементів
+        // selectedButtonsIdx: [], //! масив індексів обраних елементів
         // selectedColors: [] //! масив обраних елементів згідно масиву індексів
+        //! 1.localStorage - Ініціалізація state з localStorage
+        selectedButtonsIdx: JSON.parse(localStorage.getItem("selectedIdx")) || [], //! масив індексів обраних елементів
     }
+
+    //! 2.localStorage - Створення запису в localStorage під час першого запуску якщо його немає
+    componentDidMount() {
+        const saved = localStorage.getItem("selectedIdx");
+        if (!saved) {
+            localStorage.setItem("selectedIdx", JSON.stringify([]));
+        }
+    };
+
+    //! 3.localStorage - Оновлення(синхронізація) localStorage при кожній зміні selectedButtonsIdx
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.selectedButtonsIdx !== this.state.selectedButtonsIdx) {
+            localStorage.setItem(
+                "selectedIdx",
+                JSON.stringify(this.state.selectedButtonsIdx)
+            );
+        }
+    };
 
     // setSelectedColors(colorBoxes, selectedButtonsIdx) {
     //     //! Формуємо масив обраних елементів(кольорів)
