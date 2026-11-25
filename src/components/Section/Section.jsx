@@ -37,8 +37,8 @@ export default function Section({ children, title, isOn=true, color, numOfAircra
         >
           No title
         </TitleLugrasimoBold>}
-        <p>Кількість ЛА на сторінці: {numOfAircrafts}</p>
-        <p>Кількість моделей магазину на сторінці: {numOfModels}</p>
+        <p className={css.titleTotalTypes}>Кількість ЛА на сторінці: {numOfAircrafts}</p>
+        <p className={css.titleTotalModels}>Кількість моделей магазину на сторінці: {numOfModels}</p>
       {children}
     </SectionGlobal>
     }

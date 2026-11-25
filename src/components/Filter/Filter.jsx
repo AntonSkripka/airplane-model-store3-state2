@@ -1,6 +1,6 @@
 import css from "./Filter.module.css";
 
-export function Filter({activeButton, onSetAll, onSetPlanes, onSetHelicopters, onSetBiplanes }) {
+export function Filter({activeButton, onSetAll, onSetPlanes, onSetHelicopters, onSetBiplanes, onSetBox }) {
 
     return (
     <div className={css.filterBox}>
@@ -37,6 +37,15 @@ export function Filter({activeButton, onSetAll, onSetPlanes, onSetHelicopters, o
             onClick={onSetHelicopters}
         >
             Вертольоти
+        </button>
+
+        <button
+            // className={css.buttonHelicopterFiltration}
+            className={activeButton === "box" ? `${css.buttonHelicopterFiltration} ${css.active}` : css.buttonHelicopterFiltration}
+            type="button"
+            onClick={onSetBox}
+        >
+            Кошик {0}
         </button>
     </div>
     )

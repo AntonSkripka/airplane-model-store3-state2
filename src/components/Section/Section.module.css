@@ -22,3 +22,19 @@
     text-align: center;
     color: darkred;
 }
+
+.titleTotal {
+    font-size: 45px;
+    text-align: center;
+    color: #f7ffbc;
+    text-shadow: 3px 3px 3px #000000;
+}
+.titleTotalTypes {
+    composes: titleTotal;
+    margin-bottom: 19px;
+}
+
+.titleTotalModels {
+    composes: titleTotal;
+}
+

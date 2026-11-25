@@ -53,6 +53,12 @@
     border: 6px #9accf5 solid;
 }
 
+.buttonCartFiltration {
+    composes: button;
+    border: 6px #ff5119 solid;
+}
+
+
 /*//! Візуалізація активної кнопки */
 .active {
     color: #c51900;

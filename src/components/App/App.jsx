@@ -71,6 +71,16 @@ export class App extends Component {
         });
     }
 
+    setBox = () => {
+        console.log("Кнопка box")
+        this.setState({ 
+            aircraftsArray: [],
+            title: "Кошик",
+            backgroundColor: "orange",
+            activeButton: "box" 
+        });
+    }
+
     render() {
         const {
             aircraftsArray, 
@@ -97,6 +107,7 @@ export class App extends Component {
                     onSetPlanes={this.setPlanes}
                     onSetHelicopters={this.setHelicopters}
                     onSetBiplanes={this.setBiplanes}
+                    onSetBox={this.setBox}
                 />
 
                 {/* //! Літаки
@@ -125,7 +136,7 @@ export class App extends Component {
                     numOfAircrafts={numOfAircrafts} // Кількість ЛА в магазині
                     numOfModels={numOfModels} // Кількість моделей в магазині
                 >
-                    <PlanesList items={aircraftsArray} />
+                    {numOfAircrafts ? <PlanesList items={aircraftsArray} /> : "Нічого не вибрано"}
                 </Section>
             </>
         )
