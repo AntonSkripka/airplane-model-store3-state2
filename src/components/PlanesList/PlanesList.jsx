@@ -2,6 +2,7 @@
 import PlaneItem from "@/components/PlaneItem/PlaneItem"
 import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "@/utils/getBackgroundColor";
 import { PlanesListStyled, PlanesItemStyled } from "./PlanesList.styled";
+import { arrOfModels } from "@/utils";
 import css from "./PlanesList.module.css"; //! CSS-модулі
 // const className = clsx(
 //   "first",
@@ -35,6 +36,7 @@ import css from "./PlanesList.module.css"; //! CSS-модулі
 // }
 
 export default function PlanesList({ items }) {
+    const arrayOfModels = arrOfModels(items, false);
     return (
         <PlanesListStyled 
         // style={{
@@ -48,7 +50,7 @@ export default function PlanesList({ items }) {
         //     }}
         // className={css.planesList}
 >
-            {items.map((item) =>
+            {items.map((item, index) =>
                 <PlanesItemStyled
                     key={item.id}
                     // key={index}
@@ -79,6 +81,7 @@ export default function PlanesList({ items }) {
                         promotialUrl = {item.url.promotional}
                         realUrl={item.model.actualImages}
                         realFullUrl={item.model.actualFullImages}
+                        numOfmodels={item.model.colorsPrice}
 
                         title={item.name.brief}
                         fullTitle={item.name.full}
@@ -93,6 +96,8 @@ export default function PlanesList({ items }) {
 
                         startM={item.manufacturing.start}
                         endM={item.manufacturing.end}
+
+                        numOfModels={arrayOfModels[index]}
                     />
                 </PlanesItemStyled>)};
         </PlanesListStyled>

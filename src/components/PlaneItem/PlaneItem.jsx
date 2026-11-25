@@ -87,7 +87,9 @@ export default function PlaneItem({
     aircraftType,
 
     startM,
-    endM
+    endM,
+
+    numOfModels
 }) {
     console.log(realUrl,
     realFullUrl)
@@ -107,7 +109,7 @@ export default function PlaneItem({
                 // }}
                 className={css[getBackgroundCardTitleColor(aircraftType)]}
             >
-                {title}
+                {`${title} ${numOfModels > 1 ? `- ${numOfModels} моделі` : ""}`}
             </h3>
             <img src={url} alt={fullTitle} onError={(e) => onErrorImg(e)} />
             <TextFieldStyled><FcTrademark size={iconSize.md} className={css.icon} />Повна назва: <TextFieldValueStyled>{fullTitle}</TextFieldValueStyled></TextFieldStyled>

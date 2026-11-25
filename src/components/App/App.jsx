@@ -4,6 +4,7 @@ import Section from '@/components/Section/Section.jsx';
 import PlanesList from "@/components/PlanesList/PlanesList"
 import { Filter } from '../Filter/Filter';
 
+import { arrOfModels } from '@/utils';
 // import planes from '@/json/planes.json';
 // import helicopters from '@/json/helicopters.json';
 import aircrafts from "@/json/aircrafts.json";
@@ -80,6 +81,8 @@ export class App extends Component {
             backgroundColor,
             activeButton
         } = this.state;
+        const numOfAircrafts = aircraftsArray.length;
+        let numOfModels = arrOfModels(aircraftsArray);
         console.log("-------------------- props & state --------------------");
         console.log("🔢aircrafts:", aircrafts);
         console.log("🔢background:", backgroundColor);
@@ -119,6 +122,8 @@ export class App extends Component {
                     // isOn={isAllOn}
                     title={title}
                     color={backgroundColor}
+                    numOfAircrafts={numOfAircrafts} // Кількість ЛА в магазині
+                    numOfModels={numOfModels} // Кількість моделей в магазині
                 >
                     <PlanesList items={aircraftsArray} />
                 </Section>
